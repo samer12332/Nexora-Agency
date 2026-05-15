@@ -38,7 +38,11 @@ export function Footer({ lang }: FooterProps) {
           <p className="text-sm font-semibold">{lang === "en" ? "Contact" : "التواصل"}</p>
           <ul className="mt-3 space-y-2 text-sm text-slate-400">
             <li>nexora.business@gmail.com</li>
-            <li>+213798558420</li>
+            <li>
+              <span dir="ltr" className="inline-block [unicode-bidi:isolate]">
+                +213798558420
+              </span>
+            </li>
             <li>Nexora.Agency</li>
             <li className="pt-1">
               <div className="flex items-center gap-3">
@@ -65,7 +69,11 @@ export function Footer({ lang }: FooterProps) {
           </ul>
         </div>
       </div>
-      <p className="mt-10 text-center text-xs text-slate-500">© 2026 Nexora Agency. All rights reserved.</p>
+      <p className="mt-10 text-center text-xs text-slate-500">
+        <span dir="ltr" className="inline-block [unicode-bidi:isolate]">
+          © 2026 Nexora Agency. All rights reserved.
+        </span>
+      </p>
     </footer>
   );
 }

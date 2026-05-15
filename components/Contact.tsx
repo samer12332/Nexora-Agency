@@ -57,7 +57,11 @@ export function Contact({ lang }: ContactProps) {
           className="glass-card p-6"
         >
           <p className="text-sm text-slate-300">nexora.business@gmail.com</p>
-          <p className="mt-2 text-sm text-slate-300">+213798558420</p>
+          <p className="mt-2 text-sm text-slate-300">
+            <span dir="ltr" className="inline-block [unicode-bidi:isolate]">
+              +213798558420
+            </span>
+          </p>
           <p className="mt-2 text-sm text-slate-300">Nexora.Agency</p>
           <motion.a
             whileHover={reduceMotion ? undefined : { scale: 1.03, boxShadow: "0 0 16px rgba(74,222,128,0.35)" }}
