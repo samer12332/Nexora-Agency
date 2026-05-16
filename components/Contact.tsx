@@ -21,11 +21,15 @@ export function Contact({ lang }: ContactProps) {
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const subject = `New Project Request - ${formValues.firstName} ${formValues.lastName}`.trim();
+    const senderName = `${formValues.firstName} ${formValues.lastName}`.trim() || "Unknown Sender";
+    const senderEmail = formValues.email.trim();
+    const subject = `New Project Request - ${senderName}`.trim();
     const body = [
+      `From: ${senderName} <${senderEmail || "no-email-provided"}>`,
+      "",
       `First Name: ${formValues.firstName}`,
       `Last Name: ${formValues.lastName}`,
-      `Email: ${formValues.email}`,
+      `Email: ${senderEmail}`,
       `Project Type: ${formValues.projectType || "N/A"}`,
       `Budget Range: ${formValues.budgetRange || "N/A"}`,
       "",
@@ -33,7 +37,7 @@ export function Contact({ lang }: ContactProps) {
       formValues.projectDetails,
     ].join("\n");
 
-    const mailto = `mailto:nexora.business@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:nexora.buisiness@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 2200);
@@ -56,7 +60,7 @@ export function Contact({ lang }: ContactProps) {
           viewport={{ once: true, amount: 0.4 }}
           className="glass-card p-6"
         >
-          <p className="text-sm text-slate-300">nexora.business@gmail.com</p>
+          <p className="text-sm text-slate-300">nexora.buisiness@gmail.com</p>
           <p className="mt-2 text-sm text-slate-300">
             <span dir="ltr" className="inline-block [unicode-bidi:isolate]">
               +213798558420

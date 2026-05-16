@@ -37,7 +37,7 @@ export function Footer({ lang }: FooterProps) {
         <div>
           <p className="text-sm font-semibold">{lang === "en" ? "Contact" : "التواصل"}</p>
           <ul className="mt-3 space-y-2 text-sm text-slate-400">
-            <li>nexora.business@gmail.com</li>
+            <li>nexora.buisiness@gmail.com</li>
             <li>
               <span dir="ltr" className="inline-block [unicode-bidi:isolate]">
                 +213798558420
