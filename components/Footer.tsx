@@ -74,6 +74,16 @@ export function Footer({ lang }: FooterProps) {
           © 2026 Nexora Agency. All rights reserved.
         </span>
       </p>
+      <p className="mt-2 text-center text-xs text-slate-400">
+        <a
+          href="https://www.linkedin.com/in/samer-yousry-88921a228/"
+          target="_blank"
+          rel="noreferrer"
+          className="transition hover:text-cyan-300"
+        >
+          Developed by Eng. Samer Yousry
+        </a>
+      </p>
     </footer>
   );
 }
